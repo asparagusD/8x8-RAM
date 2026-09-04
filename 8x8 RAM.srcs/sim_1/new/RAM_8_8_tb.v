@@ -30,4 +30,19 @@ module RAM_8_8_tb(
     reg [3:0] rd_addr;
     wire [7:0] data_out;
     
+    RAM_8_8 dut(clk, rst, wr_enb, wr_addr, data_in, rd_addr, data_out);
+    
+    initial 
+        begin
+            {clk, rst, wr_enb, wr_addr, data_in, rd_addr} = 0;
+        end
+        
+    always #5 clk = ~clk;
+    
+    initial
+        begin
+            
+        
+        end    
+    
 endmodule
