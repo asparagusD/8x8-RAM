@@ -25,4 +25,8 @@ module RAM_8_8(
     input [3:0] wr_addr, input [7:0] data_in,
     output reg [7:0] data_out
     );
+    
+    // creating one internal memory
+    reg [7:0] mem [7:0];
+    
 endmodule
