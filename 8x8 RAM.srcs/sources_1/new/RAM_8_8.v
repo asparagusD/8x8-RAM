@@ -21,6 +21,8 @@
 
 
 module RAM_8_8(
-
+    input clk, rst, wr_enb, rd_enb,
+    input [3:0] wr_addr, input [7:0] data_in,
+    output reg [7:0] data_out
     );
 endmodule
