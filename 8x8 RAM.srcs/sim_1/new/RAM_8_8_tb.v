@@ -41,8 +41,17 @@ module RAM_8_8_tb(
     
     initial
         begin
-            
-        
+            rst = 1;
+            #10;
+            rst = 0;
+            wr_enb = 1;
+            wr_addr = 3'b100;
+            data_in = 5;
+            #10;
+            wr_enb = 1;
+            wr_addr = 3'b101;
+            data_in = 10;    
+            $finish;
         end    
     
 endmodule
