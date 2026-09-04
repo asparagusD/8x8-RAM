@@ -50,7 +50,13 @@ module RAM_8_8_tb(
             #10;
             wr_enb = 1;
             wr_addr = 3'b101;
-            data_in = 10;    
+            data_in = 10;
+            #10;
+            wr_enb = 0;
+            rd_addr = 3'b100;
+            #10;
+            rd_addr = 3'b101;
+            #10;    
             $finish;
         end    
     
